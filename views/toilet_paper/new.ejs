@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+
+<h1>NEW</h1>
+
+  <form action="/toilet_paper" method="POST">
+    <div>
+      <label for="manufacturer">Manufacturer: </label>
+      <input type="text" name="tp[manufacturer]" id="manufacturer">
+    </div>
+    
+    <div>
+      <label for="brandName">Brand Name: </label>
+      <input type="text" name="tp[brandName]" id="brandName">
+    </div>
+    
+    <div>
+      <label for="size">Size: </label>
+      <input type="text" name="tp[size]" id="size">
+    </div>
+
+	<div>
+      <label for="msrp">MSRP: </label>
+      <input type="text" name="tp[msrp]" id="msrp">
+    </div>
+
+    <div>
+      <label for="upc">UPC: </label>
+      <input type="text" name="tp[upc]" id="upc">
+    </div>
+
+    <div><p></p></div>
+
+    <input type="submit" value="submit">
+  </form>
+
+<% include ../partials/footer %>
