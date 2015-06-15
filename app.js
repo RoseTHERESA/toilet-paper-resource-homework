@@ -21,7 +21,7 @@ app.get('/', function(req,res){
 app.get('/toilet_paper', function(req,res){
 	db.ToiletPaper.find({}, function(err, tp){
 		if (err) throw err;
-		res.render("/toilet_paper/index", {tp:tp});
+		res.render("toilet_paper/index", {tp:tp});
 	})
 });
 
@@ -53,7 +53,7 @@ app.get('/toilet_paper/:id', function(req,res){
 app.get('/toilet_paper/:id/edit', function(req,res){
 	db.ToiletPaper.findById(req.params.id, function(err, tp){
 		if(err){
-			res.render("404");			
+			res.render("/errors/404");			
 		} else {
 			res.render('edit', {tp:tp});
 		}
